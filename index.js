@@ -1,8 +1,10 @@
-import inquirer from "inquirer";
-import { Intern } from "./lib/intern.js";
-import { Engineer} from './lib/engineer.js'
-import { Manager } from './lib/manager.js';
-import * as fs from 'fs'
+const fs = require('fs');
+const inquirer = require('inquirer');
+
+const Intern  = require('./lib/intern.js');
+const Engineer = require('./lib/engineer.js');
+const Manager  = require('./lib/manager.js');
+const Employee  = require('./lib/employee.js');
 
 //This collects all of the data 
 const teamArr = [];
@@ -202,7 +204,7 @@ const htmlPage = async () =>{
         <link rel="stylesheet" href="./assets/main.css">
         <title>Document</title>
     </head>
-    <body>
+    <body>m
     
     
     
