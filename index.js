@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const Intern  = require('./lib/intern.js');
 const Engineer = require('./lib/engineer.js');
 const Manager  = require('./lib/manager.js');
-const Employee  = require('./lib/employee.js');
+
 
 //This collects all of the data 
 const teamArr = [];
@@ -126,7 +126,7 @@ const managerInput = async () =>{
         // This sets a variable and use async await to called the inquirer object 
         const ManagerRes =  await inquirer.prompt(managerInfo)
         // once data is collected from inquirer statement it will create a new class 
-        const ManagerObj = new Manager(ManagerRes.name, ManagerRes.id, ManagerRes.email, ManagerRes.office)
+        const ManagerObj = new Manager(ManagerRes.name, ManagerRes.id, ManagerRes.email, ManagerRes.officeNumber)
         //We are storing the new Manager object to a global variable 
         // empty global object to collect all inquirer responses 
         teamArr.push(ManagerObj.getHTML());
@@ -204,7 +204,7 @@ const htmlPage = async () =>{
         <link rel="stylesheet" href="./assets/main.css">
         <title>Document</title>
     </head>
-    <body>m
+    <body>
     
     
     
